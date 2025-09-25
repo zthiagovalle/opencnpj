@@ -3,12 +3,14 @@
 //
 // Example usage:
 //
-//	client := opencnpj.NewClient(5 * time.Second)
-//	company, err := client.FindByCNPJ("06990590000123")
+// client := opencnpj.NewClient()
+// company, err := client.FindCompanyByCNPJ("06990590000123")
+//
 //	if err != nil {
-//		log.Fatal(err)
+//	    log.Fatal(err)
 //	}
-//	fmt.Println(company.LegalName)
+//
+// fmt.Printf("company: %+v", company)
 package opencnpj
 
 const (
