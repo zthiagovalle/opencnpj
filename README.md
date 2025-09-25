@@ -1,3 +1,9 @@
+[![Status do Build](https://github.com/zthiagovalle/opencnpj/actions/workflows/ci.yml/badge.svg)](https://github.com/zthiagovalle/opencnpj/actions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zthiagovalle/opencnpj)](https://goreportcard.com/report/github.com/zthiagovalle/opencnpj)
+![Go Version](https://img.shields.io/github/go-mod/go-version/zthiagovalle/opencnpj)
+[![License](https://img.shields.io/github/license/zthiagovalle/opencnpj)](https://github.com/zthiagovalle/opencnpj/blob/main/LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/zthiagovalle/opencnpj)](https://github.com/zthiagovalle/opencnpj/releases)
+
 # OpenCNPJ Go Client
 
 A simple and efficient Go client for the [OpenCNPJ API](https://opencnpj.org/).
@@ -29,7 +35,7 @@ import (
     "log"
     "time"
 
-    "github.com/thiago/opencnpj"
+    "github.com/zthiagovalle/opencnpj"
 )
 
 func main() {
