@@ -2,7 +2,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/zthiagovalle/opencnpj)](https://goreportcard.com/report/github.com/zthiagovalle/opencnpj)
 ![Go Version](https://img.shields.io/github/go-mod/go-version/zthiagovalle/opencnpj)
 [![License](https://img.shields.io/github/license/zthiagovalle/opencnpj)](https://github.com/zthiagovalle/opencnpj/blob/main/LICENSE)
-[![Latest Release](https://img.shields.io/github/v/release/zthiagovalle/opencnpj)](https://github.com/zthiagovalle/opencnpj/releases)
+[![Latest Tag](https://img.shields.io/github/v/tag/zthiagovalle/opencnpj)](https://github.com/zthiagovalle/opencnpj/tags)
 
 # OpenCNPJ Go Client
 
@@ -40,28 +40,11 @@ import (
 
 func main() {
     client := opencnpj.NewClient()
-    company, err := client.FindByCNPJ("06990590000123")
+    company, err := client.FindCompanyByCNPJ("06990590000123")
     if err != nil {
         log.Fatal(err)
     }
-    fmt.Printf("Legal Name: %s\n", company.LegalName)
-    fmt.Printf("Trade Name: %s\n", company.TradeName)
-    fmt.Printf("Registration Status: %s\n", company.RegistrationStatus)
-    fmt.Printf("Registration Status Date: %s\n", company.RegistrationStatusDate)
-    fmt.Printf("Branch Type: %s\n", company.BranchType)
-    fmt.Printf("MainActivity Start Date: %s\n", company.MainActivityStartDate)
-    fmt.Printf("Primary CNAE: %s\n", company.PrimaryCNAE)
-    fmt.Printf("Legal Nature: %s\n", company.LegalNature)
-    fmt.Printf("Street: %s\n", company.Street)
-    fmt.Printf("Number: %s\n", company.Number)
-    fmt.Printf("Complement: %s\n", company.Complement)
-    fmt.Printf("Neighborhood: %s\n", company.Neighborhood)
-    fmt.Printf("CEP: %s\n", company.CEP)
-    fmt.Printf("State: %s\n", company.State)
-    fmt.Printf("City: %s\n", company.City)
-    fmt.Printf("Email: %s\n", company.Email)
-    fmt.Printf("Share Capital: %s\n", company.ShareCapital)
-    fmt.Printf("Company Size: %s\n", company.CompanySize)
+    fmt.Printf("company: %+v", company)
 }
 ```
 
@@ -93,3 +76,15 @@ You can set a custom base URL for the API, which is useful for testing or using 
 ```go
 client := opencnpj.NewClient(opencnpj.WithBaseURL("https://my-proxy.com/%s"))
 ```
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1.  **Fork the Project**
+2.  **Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
+3.  **Commit your Changes** (`git commit -m 'feat: Add some AmazingFeature'`)
+4.  **Push to the Branch** (`git push origin feature/AmazingFeature`)
+5.  **Open a Pull Request**
